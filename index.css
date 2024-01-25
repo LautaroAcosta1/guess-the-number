@@ -1,3 +1,30 @@
-h1 {
-    color: aqua;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Estilos para el formulario */
+form {
+    text-align: center;
+}
+
+/* Estilos para el resultado */
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
 }
