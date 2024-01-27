@@ -1,7 +1,7 @@
 // Generar un número aleatorio al cargar la página
 let randomNumber = Math.floor(Math.random() * 100);
 
-// Obtener referencia al formulario, campo de entrada, botón de reinicio y elemento de resultado
+// Obtener referencia al formulario, campo de entrada y elemento de resultado
 const guessForm = document.getElementById('guessForm');
 const resultElement = document.getElementById('result');
 const failedGuessesElement = document.getElementById('failedAttempt'); // Nuevo elemento para mostrar números fallidos
