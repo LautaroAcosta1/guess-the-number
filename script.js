@@ -5,6 +5,7 @@ let randomNumber = Math.floor(Math.random() * 100);
 const guessForm = document.getElementById('guessForm');
 const resultElement = document.getElementById('result');
 const failedGuessesElement = document.getElementById('failedAttempt'); // Nuevo elemento para mostrar números fallidos
+const resetButton = document.getElementById('resetButton');
 let attempts = 0; // Contador de intentos
 let failedGuesses = []; // Array para almacenar números fallidos
 
@@ -19,6 +20,7 @@ guessForm.addEventListener('submit', function(event) {
         
         if (userGuess === randomNumber) {
             resultElement.textContent = 'Correcto. ¡Ganaste!.';
+            guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de ganar.
         } else if (userGuess > randomNumber) {
             resultElement.textContent = `El número es más bajo. Intentos restantes: ${5 - attempts}`;
         } else {
@@ -26,7 +28,7 @@ guessForm.addEventListener('submit', function(event) {
         }
 
         failedGuesses.push(userGuess); // Agregar el número fallido al array
-        failedGuessesElement.textContent = `Números fallidos: ${failedGuesses.join(', ')}`; // Mostrar los números fallidos
+        failedGuessesElement.textContent = `Números utilizados: ${failedGuesses.join(', ')}`; // Mostrar los números fallidos
 
         if (attempts === 5 && userGuess !== randomNumber) {
             resultElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
@@ -34,6 +36,10 @@ guessForm.addEventListener('submit', function(event) {
         }
     }
 });
+
+resetButton.addEventListener(function() {
+    console.log("wef")
+})
 
 
 

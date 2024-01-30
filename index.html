@@ -17,7 +17,8 @@
         <form id="guessForm">
             <label for="guessInput">Elige un número entre 0 y 99:</label>
             <input type="number" id="guessInput" min="0" max="99" required inputmode="numeric" pattern="[0-9]*">
-            <button type="submit">Adivinar</button>
+            <button type="submit" id="guessButton">Adivinar</button>
+            <button id="resetButton">Reiniciar</button>
         </form>
         <h3 id="failedAttempt"></h3>
         <p id="result"></p>
