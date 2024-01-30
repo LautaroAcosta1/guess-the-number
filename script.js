@@ -51,4 +51,20 @@ guessForm.addEventListener('submit', function(event) {
 });
 
 
-console.log(randomNumber)
+resetButton.addEventListener('click', function() {
+    // Restablecer todas las variables y elementos necesarios para comenzar un nuevo juego
+    randomNumber = Math.floor(Math.random() * 100);
+    attempts = 0;
+    failedGuesses = [];
+    resultElement.textContent = '';
+    failedGuessesElement.textContent = '';
+    repeatedNumber.textContent = '';
+    guessForm.querySelector('input[type="number"]').disabled = false;
+    guessForm.querySelector('input[type="number"]').value = '';
+    guessForm.querySelector('button[type="submit"]').style.display = 'block';
+
+    console.log('numero de reinicio:', randomNumber)
+});
+
+
+console.log('numero de primer intento:',randomNumber)
