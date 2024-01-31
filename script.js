@@ -7,8 +7,13 @@ const resultElement = document.getElementById('result');
 const repeatedNumber = document.getElementById('repeated')
 const failedGuessesElement = document.getElementById('failedAttempt'); // Nuevo elemento para mostrar números fallidos
 const resetButton = document.getElementById('resetButton');
+const won = document.getElementById('won');
+const lost = document.getElementById('lost');
+
 let attempts = 0; // Contador de intentos
 let failedGuesses = []; // Array para almacenar números fallidos
+let gameWon = 0;
+let gameLost = 0;
 
 guessForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar el envío del formulario
@@ -29,6 +34,8 @@ guessForm.addEventListener('submit', function(event) {
             attempts++;
             
             if (userGuess === randomNumber) {
+                gameWon++
+                won.textContent = gameWon;
                 resultElement.textContent = 'Correcto. ¡Ganaste!.';
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de ganar.
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
@@ -42,6 +49,8 @@ guessForm.addEventListener('submit', function(event) {
             failedGuessesElement.textContent = `Números utilizados: ${failedGuesses.join(', ')}`; // Mostrar los números fallidos
     
             if (attempts === 5 && userGuess !== randomNumber) {
+                gameLost++
+                lost.textContent = gameLost;
                 resultElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de 5 intentos
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
