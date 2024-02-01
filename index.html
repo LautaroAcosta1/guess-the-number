@@ -8,30 +8,27 @@
 </head>
 <body>
 
-<!--     <header>
-        <h1 class="title">Guess The Number</h1>
-    </header> -->
-
     <nav>
-        <button class="btn-nav">Como jugar</button>
-        <button class="btn-nav">Estadisticas</button>
-        <button class="btn-nav">Configuración</button>
-
-
-
-<!--         <div class="statistics-container">
+        <div class="btn-nav-container">
+            <button class="btn-nav">Como jugar</button>
+            <button class="btn-nav">Estadisticas</button>
+            <button class="btn-nav">Configuración</button>
+        </div>
+        <div class="statistics-container">
             <p class="statistics">Partidas ganadas:<p id="won"></p></p>
             <p class="statistics">Partidas perdidas:<p id="lost"></p></p>
-        </div> -->
+        </div>
     </nav>
 
     <section class="main-container">
-        <h2>Adivina el Número</h2>
         <form id="guessForm" class="form">
-            <label for="guessInput">Elige un número entre 0 y 99:</label>
-            <input type="number" id="guessInput" min="0" max="99" required inputmode="numeric" pattern="[0-9]*">
-            <button type="submit" id="guessButton">Adivinar</button>
-            <button id="resetButton">Reiniciar</button>
+            <div class="input-container">
+                <input type="number" min="0" max="99" required inputmode="numeric" pattern="[0-9]*" placeholder="Entre 0 y 99..." class="input-form">
+            </div>
+            <div class="btn-container">
+                <button type="submit" id="guessButton" class="btn-input">Agregar</button>
+                <button id="resetButton" class="btn-input">Reiniciar</button>
+            </div>
         </form>
         <h3 id="failedAttempt"></h3>
         <p id="result"></p>
