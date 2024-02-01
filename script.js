@@ -3,7 +3,8 @@ let randomNumber = Math.floor(Math.random() * 100);
 
 // Obtener referencia al formulario, campo de entrada y elemento de resultado
 const guessForm = document.getElementById('guessForm');
-const resultElement = document.getElementById('result');
+const resultElement = document.getElementById('arrows');
+const messageElement = document.getElementById('message');
 const repeatedNumber = document.getElementById('repeated')
 const failedGuessesElement = document.getElementById('failedAttempt'); // Nuevo elemento para mostrar números fallidos
 const resetButton = document.getElementById('resetButton');
@@ -37,7 +38,7 @@ guessForm.addEventListener('submit', function(event) {
             if (userGuess === randomNumber) {
                 gameWon++
                 won.textContent = gameWon;
-                resultElement.textContent = 'Correcto. ¡Ganaste!.';
+                messageElement.textContent = 'Correcto. ¡Ganaste!.';
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de ganar.
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
             } else if (userGuess > randomNumber) {
@@ -56,7 +57,7 @@ guessForm.addEventListener('submit', function(event) {
             if (attempts === 5 && userGuess !== randomNumber) {
                 gameLost++
                 lost.textContent = gameLost;
-                resultElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
+                messageElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de 5 intentos
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
             }
@@ -70,7 +71,9 @@ resetButton.addEventListener('click', function() {
     randomNumber = Math.floor(Math.random() * 100);
     attempts = 0;
     failedGuesses = [];
-    resultElement.textContent = '';
+    arrows = [];
+    resultElement.innerHTML = '';
+    messageElement.textContent = '';
     failedGuessesElement.textContent = '';
     repeatedNumber.textContent = '';
     guessForm.querySelector('input[type="number"]').disabled = false;
