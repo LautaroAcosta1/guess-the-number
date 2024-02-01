@@ -91,7 +91,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 60px;
     background-color: aqua;
 }
 
@@ -174,14 +174,9 @@ input[type=number] {
     -moz-appearance: textfield; /* Firefox */
 }
 
-
-#failedAttempt {
-    margin-top: 20px;
-}
-
-#result {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-    font-weight: bold;
+.numbers-container {
+    background-color: #f441a5;
+    margin-top: 30px;
+    height: 150px;
+    width: 500px;
 }

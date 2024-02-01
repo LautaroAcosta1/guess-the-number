@@ -12,6 +12,7 @@ const lost = document.getElementById('lost');
 
 let attempts = 0; // Contador de intentos
 let failedGuesses = []; // Array para almacenar números fallidos
+let arrows = []; // Array para almacenar las flechas
 let gameWon = 0;
 let gameLost = 0;
 
@@ -40,11 +41,15 @@ guessForm.addEventListener('submit', function(event) {
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de ganar.
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
             } else if (userGuess > randomNumber) {
-                resultElement.textContent = `El número es más bajo. Intentos restantes: ${5 - attempts}`;
+                resultElement.innerHTML = `<i class="fa-solid fa-arrow-down"></i>`;
+                arrows.push(`<i class="fa-solid fa-arrow-down"></i>`);
             } else {
-                resultElement.textContent = `El número es más alto. Intentos restantes: ${5 - attempts}`;
+                resultElement.innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
+                arrows.push(`<i class="fa-solid fa-arrow-up"></i>`);
             }
-    
+            
+            resultElement.innerHTML = arrows.join(', '); // Mostrar las flechas.
+
             failedGuesses.push(userGuess); // Agregar el número fallido al array
             failedGuessesElement.textContent = `Números utilizados: ${failedGuesses.join(', ')}`; // Mostrar los números fallidos
     
