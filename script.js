@@ -33,13 +33,17 @@ guessForm.addEventListener('submit', function(event) {
     } else {
         // Procesar el intento del usuario normalmente
         if (attempts < 5) {
-            attempts++;
+            attempts++; // Suma un intento
             
             if (userGuess === randomNumber) {
-                gameWon++
+                gameWon++ // Suma una partida ganada
                 won.textContent = gameWon;
-                messageElement.textContent = 'Correcto. ¡Ganaste!.';
-                guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de ganar.
+                /* messageElement.textContent = 'Correcto. ¡Ganaste!.'; */
+
+                resultElement.innerHTML = '<i class="fa-solid fa-check"></i>';
+                arrows.push(`<i class="fa-solid fa-check"></i>`); // Agrega el ckeck de que la respuesta es correcta
+
+                guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de ganar
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
             } else if (userGuess > randomNumber) {
                 resultElement.innerHTML = `<i class="fa-solid fa-arrow-down"></i>`;
@@ -49,15 +53,18 @@ guessForm.addEventListener('submit', function(event) {
                 arrows.push(`<i class="fa-solid fa-arrow-up"></i>`);
             }
             
-            resultElement.innerHTML = arrows.join(', '); // Mostrar las flechas.
+            resultElement.innerHTML = arrows.join('<div class="arrows-space"></div>'); // Mostrar las flechas
 
             failedGuesses.push(userGuess); // Agregar el número fallido al array
-            failedGuessesElement.textContent = `Números utilizados: ${failedGuesses.join(', ')}`; // Mostrar los números fallidos
+            failedGuessesElement.innerHTML = failedGuesses.map(char => `<div class="numbers-space">${char < 10 ? '0' + char : char}</div>`).join('');
+ // Mostrar los números fallidos
     
             if (attempts === 5 && userGuess !== randomNumber) {
-                gameLost++
+                gameLost++ // Suma una partida perdida
                 lost.textContent = gameLost;
+
                 messageElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
+
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de 5 intentos
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
             }
