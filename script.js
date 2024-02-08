@@ -19,6 +19,24 @@ let gameLost = 0;
 
 guessForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar el envío del formulario
+
+    function mostrarNotificacion(message) {
+        Toastify({
+            text: message,
+            duration: 99999999, // Duración en milisegundos
+            close: true, // Opcional: botón de cerrar la notificación
+            gravity: "top", // Opcional: posición de la notificación (top, bottom, left, right)
+            position: "center", // Opcional: alineación horizontal de la notificación (left, center, right)
+            stopOnFocus: true, // Opcional: detener el temporizador de la notificación cuando el usuario enfoque la ventana
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            offset: {
+                x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                y: 150 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+        }).showToast();
+    }
     
     const userGuess = parseInt(guessForm.querySelector('input[type="number"]').value);
     
@@ -39,6 +57,8 @@ guessForm.addEventListener('submit', function(event) {
                 gameWon++ // Suma una partida ganada
                 won.textContent = gameWon;
                 /* messageElement.textContent = 'Correcto. ¡Ganaste!.'; */
+
+                mostrarNotificacion("¡Ganaste! El número correcto es " + randomNumber + ".");
 
                 resultElement.innerHTML = '<i class="fa-solid fa-check"></i>';
                 arrows.push(`<i class="fa-solid fa-check"></i>`); // Agrega el ckeck de que la respuesta es correcta
