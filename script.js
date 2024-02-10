@@ -14,30 +14,31 @@ const lost = document.getElementById('lost');
 let attempts = 0; // Contador de intentos
 let failedGuesses = []; // Array para almacenar números fallidos
 let arrows = []; // Array para almacenar las flechas
-let gameWon = 0;
-let gameLost = 0;
+let gameWon = 0; // contador de partidas ganadas
+let gameLost = 0; // contador de partidas perdidas
 
 guessForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario
-
-    function mostrarNotificacion(message) {
+    function toastGameWon(message) {
         Toastify({
             text: message,
             duration: 99999999, // Duración en milisegundos
             close: true, // Opcional: botón de cerrar la notificación
-            gravity: "top", // Opcional: posición de la notificación (top, bottom, left, right)
+            gravity: "bottom", // Opcional: posición de la notificación (top, bottom, left, right)
             position: "center", // Opcional: alineación horizontal de la notificación (left, center, right)
             stopOnFocus: true, // Opcional: detener el temporizador de la notificación cuando el usuario enfoque la ventana
             style: {
                 background: "linear-gradient(to right, #00b09b, #96c93d)",
+                weight: 10,
             },
             offset: {
                 x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                y: 150 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
             },
         }).showToast();
     }
-    
+
+    event.preventDefault(); // Evitar el envío del formulario
+
     const userGuess = parseInt(guessForm.querySelector('input[type="number"]').value);
     
     if (failedGuesses.includes(userGuess)) {
@@ -58,7 +59,7 @@ guessForm.addEventListener('submit', function(event) {
                 won.textContent = gameWon;
                 /* messageElement.textContent = 'Correcto. ¡Ganaste!.'; */
 
-                mostrarNotificacion("¡Ganaste! El número correcto es " + randomNumber + ".");
+                toastGameWon("¡Ganaste! El número correcto es " + randomNumber + ".");
 
                 resultElement.innerHTML = '<i class="fa-solid fa-check"></i>';
                 arrows.push(`<i class="fa-solid fa-check"></i>`); // Agrega el ckeck de que la respuesta es correcta
@@ -76,8 +77,7 @@ guessForm.addEventListener('submit', function(event) {
             resultElement.innerHTML = arrows.join('<div class="arrows-space"></div>'); // Mostrar las flechas
 
             failedGuesses.push(userGuess); // Agregar el número fallido al array
-            failedGuessesElement.innerHTML = failedGuesses.map(char => `<div class="numbers-space">${char < 10 ? '0' + char : char}</div>`).join('');
- // Mostrar los números fallidos
+            failedGuessesElement.innerHTML = failedGuesses.map(char => `<div class="numbers-space">${char < 10 ? '0' + char : char}</div>`).join(''); // Mostrar los números fallidos
     
             if (attempts === 5 && userGuess !== randomNumber) {
                 gameLost++ // Suma una partida perdida
