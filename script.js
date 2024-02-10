@@ -18,17 +18,17 @@ let gameWon = 0; // contador de partidas ganadas
 let gameLost = 0; // contador de partidas perdidas
 
 guessForm.addEventListener('submit', function(event) {
-    function toastGameWon(message) {
+    function toast(message, time, background) {
         Toastify({
             text: message,
-            duration: 99999999, // Duración en milisegundos
+            duration: time, // Duración en milisegundos
             close: true, // Opcional: botón de cerrar la notificación
             gravity: "bottom", // Opcional: posición de la notificación (top, bottom, left, right)
             position: "center", // Opcional: alineación horizontal de la notificación (left, center, right)
             stopOnFocus: true, // Opcional: detener el temporizador de la notificación cuando el usuario enfoque la ventana
+            className: "toast",
             style: {
-                background: "linear-gradient(to right, #00b09b, #96c93d)",
-                weight: 10,
+                background: background,
             },
             offset: {
                 x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
@@ -42,12 +42,7 @@ guessForm.addEventListener('submit', function(event) {
     const userGuess = parseInt(guessForm.querySelector('input[type="number"]').value);
     
     if (failedGuesses.includes(userGuess)) {
-        repeatedNumber.textContent = 'Ya has intentado ese número. Por favor, intenta con otro.';
-
-        // Mostrar el mensaje durante 3 segundos y luego ocultarlo
-        setTimeout(function() {
-            repeatedNumber.textContent = ''; // Vaciar el contenido del mensaje
-        }, 3000); // 3000 milisegundos = 3 segundos
+        toast("Ya has intentado este número. Por favor, intenta otro.", 1000, "linear-gradient(to right, #FFA500, #FF4500)");
 
     } else {
         // Procesar el intento del usuario normalmente
@@ -57,9 +52,8 @@ guessForm.addEventListener('submit', function(event) {
             if (userGuess === randomNumber) {
                 gameWon++ // Suma una partida ganada
                 won.textContent = gameWon;
-                /* messageElement.textContent = 'Correcto. ¡Ganaste!.'; */
 
-                toastGameWon("¡Ganaste! El número correcto es " + randomNumber + ".");
+                toast("¡Ganaste! El número correcto es " + randomNumber + ".", 5000, "linear-gradient(to right, #00b09b, #96c93d)");
 
                 resultElement.innerHTML = '<i class="fa-solid fa-check"></i>';
                 arrows.push(`<i class="fa-solid fa-check"></i>`); // Agrega el ckeck de que la respuesta es correcta
@@ -83,7 +77,9 @@ guessForm.addEventListener('submit', function(event) {
                 gameLost++ // Suma una partida perdida
                 lost.textContent = gameLost;
 
-                messageElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
+                toast("¡Perdiste! El número correcto es " + randomNumber + ".", 5000, "linear-gradient(to right, #ff0000, #ff4500)");
+
+               // messageElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
 
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de 5 intentos
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
