@@ -32,7 +32,7 @@ guessForm.addEventListener('submit', function(event) {
             },
             offset: {
                 x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                y: 6 // vertical axis - can be a number or a string indicating unity. eg: '2em'
             },
         }).showToast();
     }
@@ -53,7 +53,7 @@ guessForm.addEventListener('submit', function(event) {
                 gameWon++ // Suma una partida ganada
                 won.textContent = gameWon;
 
-                toast("¡Ganaste! El número correcto es " + randomNumber + ".", 5000, "linear-gradient(to right, #00b09b, #96c93d)");
+                toast("¡Ganaste! El número correcto es " + randomNumber + ".", 4000, "linear-gradient(to right, #00b09b, #96c93d)");
 
                 resultElement.innerHTML = '<i class="fa-solid fa-check"></i>';
                 arrows.push(`<i class="fa-solid fa-check"></i>`); // Agrega el ckeck de que la respuesta es correcta
@@ -77,9 +77,7 @@ guessForm.addEventListener('submit', function(event) {
                 gameLost++ // Suma una partida perdida
                 lost.textContent = gameLost;
 
-                toast("¡Perdiste! El número correcto es " + randomNumber + ".", 5000, "linear-gradient(to right, #ff0000, #ff4500)");
-
-               // messageElement.textContent = `¡Lo siento! Has agotado tus 5 intentos. El número correcto era ${randomNumber}. ¡Perdiste!`;
+                toast("¡Perdiste! El número correcto es " + randomNumber + ".", 4000, "linear-gradient(to right, #ff0000, #ff4500)");
 
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de 5 intentos
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"

@@ -91,7 +91,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .form {
@@ -177,43 +177,72 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
-    background-color: #f441a5;
+    border-radius: 10px;
+    gap: 5px;
     margin-top: 30px;
-    height: 150px;
-    width: 500px;
+    height: 180px;
+    width: 450px;
 }
 
 .numbers {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #FFD43B;
-    font-size: 50px;
+    color: #23272F;
+    font-size: 40px;
 }
 
 .numbers-space {
-    margin-left: 22px;
-    margin-right: 22px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: rgb(255, 212, 59);
+    box-shadow: inset 2px 2px 5px #0e1013, inset -2px -2px 5px #383e4b, 0px 0px 50px rgba(255, 212, 59, 0), 0px 0px 50px rgba(255, 102, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.fa-arrow-down {
+    background-color: rgb(255, 0, 0);
+    box-shadow: inset 2px 2px 5px #0e1013, inset -2px -2px 5px #383e4b, 0px 0px 50px rgba(255, 212, 59, 0), 0px 0px 50px rgba(255, 102, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fa-arrow-up {
+    background-color: rgb(0, 255, 0);
+    box-shadow: inset 2px 2px 5px #0e1013, inset -2px -2px 5px #383e4b, 0px 0px 50px rgba(255, 212, 59, 0), 0px 0px 50px rgba(255, 102, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .arrows {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #03a9f4;
-    font-size: 50px;
+    color: #23272F;
+    font-size: 30px;
 }
 
 .arrows-space {
-    margin: 28px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .fa-check {
-    font-size: 45px;
+    font-size: 25px;
+    background-color: rgb(255, 102, 0);
+    box-shadow: inset 2px 2px 5px #0e1013, inset -2px -2px 5px #383e4b, 0px 0px 50px rgba(255, 212, 59, 0), 0px 0px 50px rgba(255, 102, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .toast {
-    font-size: 17px;
+    font-size: 16px;
 }
 
