@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <title>Guess The Number</title>
@@ -14,9 +18,9 @@
 
     <nav>
         <div class="btn-nav-container">
-            <button class="btn-nav">Como jugar</button>
-            <button class="btn-nav">Estadisticas</button>
-            <button class="btn-nav">Configuración</button>
+            <button id="btn-howToPlay" class="btn-nav">Como jugar</button>
+            <button id="btn-statistics" class="btn-nav">Estadisticas</button>
+            <button id="btn-configuration" class="btn-nav">Configuración</button>
         </div>
         <div class="statistics-container">
             <p class="statistics">Partidas ganadas:<p id="won" class="statistics-number"></p></p>
@@ -41,9 +45,7 @@
             <p id="repeated"></p>
         </div>
     </section>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
+    
     <script src="./script.js"></script>
 </body>
 </html>

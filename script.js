@@ -1,3 +1,27 @@
+$('#btn-howToPlay').click(function() {
+    Swal.fire({
+        title: "¿Comó jugar?",
+        text: "nkladskldnas",
+        icon: "question"
+    });
+})
+
+$('#btn-statistics').click(function() {
+    Swal.fire({
+        title: "Estadisticas",
+        text: "adsasddasasdads",
+        icon: "question"
+    });
+})
+
+$('#btn-configuration').click(function() {
+    Swal.fire({
+        title: "Configuración",
+        text: "adsasddasasdads",
+        icon: "question"
+    });
+})
+
 // Generar un número aleatorio al cargar la página
 let randomNumber = Math.floor(Math.random() * 100);
 
@@ -32,7 +56,7 @@ guessForm.addEventListener('submit', function(event) {
             },
             offset: {
                 x: 0, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                y: 6 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                y: 4 // vertical axis - can be a number or a string indicating unity. eg: '2em'
             },
         }).showToast();
     }
