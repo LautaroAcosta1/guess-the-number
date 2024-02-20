@@ -90,7 +90,6 @@ function saveStatistics() {
 // Actualiza las estadísticas en localStorage después de cada partida
 function updateStatistics() {
     saveStatistics();
-    // También puedes actualizar la visualización de las estadísticas en tu interfaz de usuario aquí
 }
 
 // Lógica para incrementar las estadísticas cuando se gana una partida
@@ -141,7 +140,7 @@ guessForm.addEventListener('submit', function(event) {
                 winGame()
                 won.textContent = gameWon;
 
-                toast("¡Ganaste! El número correcto es " + randomNumber + ".", 4000, "linear-gradient(to right, #00b09b, #96c93d)");
+                toast("¡Ganaste! El número correcto es " + randomNumber + ".", 8000, "linear-gradient(to right, #00b09b, #96c93d)");
 
                 resultElement.innerHTML = '<i class="fa-solid fa-check"></i>';
                 arrows.push(`<i class="fa-solid fa-check"></i>`); // Agrega el ckeck de que la respuesta es correcta
@@ -165,7 +164,7 @@ guessForm.addEventListener('submit', function(event) {
                 loseGame()
                 lost.textContent = gameLost;
 
-                toast("¡Perdiste! El número correcto es " + randomNumber + ".", 4000, "linear-gradient(to right, #ff0000, #ff4500)");
+                toast("¡Perdiste! El número correcto es " + randomNumber + ".", 8000, "linear-gradient(to right, #ff0000, #ff4500)");
 
                 guessForm.querySelector('input[type="number"]').disabled = true; // Deshabilita el campo de entrada después de 5 intentos
                 guessForm.querySelector('button[type="submit"]').style.display = 'none'; // Oculta el botón de "Adivinar"
