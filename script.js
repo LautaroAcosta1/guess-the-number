@@ -1,6 +1,6 @@
 $('#btn-howToPlay').click(function() {
     Swal.fire({
-        title: `<span style="color: #23272F">¿Comó jugar?</span>`,
+        title: `<span style="color: #fff">¿Comó jugar?</span>`,
         html: `
             <h3 class="sweetAlert-title">Inicio del juego:</h3>
             <p class="sweetAlert-text">Al cargar la página, se generará automáticamente un número aleatorio entre 1 y 100.</p>
@@ -24,6 +24,7 @@ $('#btn-howToPlay').click(function() {
             <h3 class="sweetAlert-title">Reinicio del juego:</h3>
             <p class="sweetAlert-text">Si deseas jugar de nuevo, simplemente haz clic en el botón "Reiniciar" para generar un nuevo número secreto y restablecer tus intentos.</p>
         `,
+        background: "#23272F",
         showCloseButton: true,
         confirmButtonText: "Ok",
         confirmButtonColor: "rgb(255, 102, 0)"
@@ -32,13 +33,14 @@ $('#btn-howToPlay').click(function() {
 
 $('#btn-statistics').click(function() {
     Swal.fire({
-        title: `<span style="color: #23272F">Estadisticas</span>`,
+        title: `<span style="color: #fff">Estadisticas</span>`,
         html: `
             <div class="statistics-container">
                 <h2 class="statistics">Partidas ganadas:<p id="wonNumber" class="statistics-number"></p></h2>
                 <h2 class="statistics">Partidas perdidas:<p id="lostNumber" class="statistics-number"></p></h2>
             </div>
         `,
+        background: "#23272F",
         showCloseButton: true,
         confirmButtonText: "Ok",
         confirmButtonColor: "rgb(255, 102, 0)",
@@ -52,9 +54,10 @@ $('#btn-statistics').click(function() {
 
 $('#btn-configuration').click(function() {
     Swal.fire({
-        title: `<span style="color: #23272F">Configuración</span>`,
+        title: `<span style="color: #fff">Configuración</span>`,
         text: "Muy pronto...",
         icon: "warning",
+        background: "#23272F",
         showCloseButton: true,
         confirmButtonText: "Ok",
         confirmButtonColor: "rgb(255, 102, 0)"
