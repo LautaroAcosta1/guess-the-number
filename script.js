@@ -1,24 +1,63 @@
 $('#btn-howToPlay').click(function() {
     Swal.fire({
-        title: "¿Comó jugar?",
-        text: "nkladskldnas",
-        icon: "question"
+        title: `<span style="color: #23272F">¿Comó jugar?</span>`,
+        html: `
+            <h3 class="sweetAlert-title">Inicio del juego:</h3>
+            <p class="sweetAlert-text">Al cargar la página, se generará automáticamente un número aleatorio entre 1 y 100.</p>
+            <h3 class="sweetAlert-title">Realizar un intento:</h3>
+            <ol class="sweetAlert-text-container">
+                <p class="sweetAlert-text">Ingresa un número en el campo de entrada y presiona el botón "Adivinar".</p>
+                <p class="sweetAlert-text">Solo se permiten números enteros entre 1 y 100.</p>
+                <p class="sweetAlert-text">Tienes un máximo de 5 intentos para adivinar el número correcto.</p>
+            </ol>
+            <h3 class="sweetAlert-title">Interpretación de pistas:</h3>
+            <ol class="sweetAlert-text-container">
+                <p class="sweetAlert-text">Después de cada intento, recibirás una pista que te indicará si el número secreto es mayor o menor al número ingresado.</p>
+                <p class="sweetAlert-text">Una flecha hacia arriba <i class="fa-solid fa-arrow-up"></i> significa que el número secreto es mayor al que ingresaste.</p>
+                <p class="sweetAlert-text">Una flecha hacia abajo <i class="fa-solid fa-arrow-down"></i> significa que el número secreto es menor al que ingresaste.</p>
+            </ol>
+            <h3 class="sweetAlert-title">Finalización del juego:</h3>
+            <ol class="sweetAlert-text-container">
+                <p class="sweetAlert-text">Si adivinas el número secreto dentro de los 5 intentos, ¡ganarás la partida!</p>
+                <p class="sweetAlert-text">Si agotas tus 5 intentos sin adivinar el número correcto, perderás la partida.</p>
+            </ol>
+            <h3 class="sweetAlert-title">Reinicio del juego:</h3>
+            <p class="sweetAlert-text">Si deseas jugar de nuevo, simplemente haz clic en el botón "Reiniciar" para generar un nuevo número secreto y restablecer tus intentos.</p>
+        `,
+        showCloseButton: true,
+        confirmButtonText: "Ok",
+        confirmButtonColor: "rgb(255, 102, 0)"
     });
 })
 
 $('#btn-statistics').click(function() {
     Swal.fire({
-        title: "Estadisticas",
-        text: "adsasddasasdads",
-        icon: "question"
+        title: `<span style="color: #23272F">Estadisticas</span>`,
+        html: `
+            <div class="statistics-container">
+                <p class="statistics">Partidas ganadas:<p id="wonNumber" class="statistics-number"></p></p>
+                <p class="statistics">Partidas perdidas:<p id="lostNumber" class="statistics-number"></p></p>
+            </div>
+        `,
+        showCloseButton: true,
+        confirmButtonText: "Ok",
+        confirmButtonColor: "rgb(255, 102, 0)",
+        didOpen: () => {
+            // Actualiza el contenido de los elementos al abrir la alerta
+            $('#wonNumber').text(gameWon);
+            $('#lostNumber').text(gameLost);
+        }
     });
 })
 
 $('#btn-configuration').click(function() {
     Swal.fire({
-        title: "Configuración",
-        text: "adsasddasasdads",
-        icon: "question"
+        title: `<span style="color: #23272F">Configuración</span>`,
+        text: "Muy pronto...",
+        icon: "warning",
+        showCloseButton: true,
+        confirmButtonText: "Ok",
+        confirmButtonColor: "rgb(255, 102, 0)"
     });
 })
 
