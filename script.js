@@ -77,8 +77,33 @@ const lost = document.getElementById('lost');
 let attempts = 0; // Contador de intentos
 let failedGuesses = []; // Array para almacenar números fallidos
 let arrows = []; // Array para almacenar las flechas
-let gameWon = 0; // contador de partidas ganadas
-let gameLost = 0; // contador de partidas perdidas
+// Al cargar la página, recupera las estadísticas almacenadas en localStorage
+let gameWon = parseInt(localStorage.getItem('gameWon')) || 0;
+let gameLost = parseInt(localStorage.getItem('gameLost')) || 0;
+
+// Función para guardar las estadísticas en localStorage
+function saveStatistics() {
+    localStorage.setItem('gameWon', gameWon.toString());
+    localStorage.setItem('gameLost', gameLost.toString());
+}
+
+// Actualiza las estadísticas en localStorage después de cada partida
+function updateStatistics() {
+    saveStatistics();
+    // También puedes actualizar la visualización de las estadísticas en tu interfaz de usuario aquí
+}
+
+// Lógica para incrementar las estadísticas cuando se gana una partida
+function winGame() {
+    gameWon++;
+    updateStatistics();
+}
+
+// Lógica para incrementar las estadísticas cuando se pierde una partida
+function loseGame() {
+    gameLost++;
+    updateStatistics();
+}
 
 guessForm.addEventListener('submit', function(event) {
     function toast(message, time, background) {
@@ -113,7 +138,7 @@ guessForm.addEventListener('submit', function(event) {
             attempts++; // Suma un intento
             
             if (userGuess === randomNumber) {
-                gameWon++ // Suma una partida ganada
+                winGame()
                 won.textContent = gameWon;
 
                 toast("¡Ganaste! El número correcto es " + randomNumber + ".", 4000, "linear-gradient(to right, #00b09b, #96c93d)");
@@ -137,7 +162,7 @@ guessForm.addEventListener('submit', function(event) {
             failedGuessesElement.innerHTML = failedGuesses.map(char => `<div class="numbers-space">${char < 10 ? '0' + char : char}</div>`).join(''); // Mostrar los números fallidos
     
             if (attempts === 5 && userGuess !== randomNumber) {
-                gameLost++ // Suma una partida perdida
+                loseGame()
                 lost.textContent = gameLost;
 
                 toast("¡Perdiste! El número correcto es " + randomNumber + ".", 4000, "linear-gradient(to right, #ff0000, #ff4500)");
@@ -163,9 +188,4 @@ resetButton.addEventListener('click', function() {
     guessForm.querySelector('input[type="number"]').disabled = false;
     guessForm.querySelector('input[type="number"]').value = '';
     guessForm.querySelector('button[type="submit"]').style.display = 'block';
-
-    console.log('numero de reinicio:', randomNumber)
 });
-
-
-console.log('numero de primer intento:',randomNumber)
