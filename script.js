@@ -35,8 +35,8 @@ $('#btn-statistics').click(function() {
         title: `<span style="color: #23272F">Estadisticas</span>`,
         html: `
             <div class="statistics-container">
-                <p class="statistics">Partidas ganadas:<p id="wonNumber" class="statistics-number"></p></p>
-                <p class="statistics">Partidas perdidas:<p id="lostNumber" class="statistics-number"></p></p>
+                <h2 class="statistics">Partidas ganadas:<p id="wonNumber" class="statistics-number"></p></h2>
+                <h2 class="statistics">Partidas perdidas:<p id="lostNumber" class="statistics-number"></p></h2>
             </div>
         `,
         showCloseButton: true,
