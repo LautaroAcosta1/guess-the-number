@@ -106,7 +106,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 110px;
 }
 
 .form {
@@ -190,7 +190,7 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
     border-radius: 10px;
     gap: 5px;
-    margin-top: 30px;
+    margin-top: 40px;
     height: 180px;
     width: 470px;
     box-shadow: inset 1px 1px 5px #23272F, inset -1px -1px 2px #23272F, 0px 0px 20px #23272F, 0px 0px 20px #14161a;
