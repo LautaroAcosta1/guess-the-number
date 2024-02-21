@@ -1,0 +1,281 @@
+$background-main: #0e1013;
+$colour-main: #23272F;
+$colour-secondary: #fff;
+$colour-button: #383e4b;
+$colour-hover: rgb(255, 102, 0);
+$colour-text: #ffffffa0;
+$colour-arrow: #000;
+$colour-arrowUp: rgb(0, 255, 0);
+$colour-arrowUp-shadow: rgb(0, 220, 0);
+$colour-arrowDown: rgb(255, 0, 0);
+$colour-arrowDown-shadow: rgb(220, 0, 0);
+$colour-check-shadow: rgb(220, 72, 0);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-main;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    .btn-nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        .btn-nav {
+            text-decoration: none;
+            position: relative;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+            color: $colour-secondary;
+            width: 9em;
+            height: 3em;
+            line-height: 2em;
+            text-align: center;
+            background: linear-gradient(90deg, $colour-hover, $colour-hover, $background-main, $colour-hover);
+            background-size: 300%;
+            border-radius: 30px;
+            z-index: 1;
+            &:before {
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                z-index: -1;
+                background: linear-gradient(90deg, $colour-button, $colour-main, $colour-button, $colour-button);
+                background-size: 400%;
+                border-radius: 35px;
+                transition: 0.6s;
+            }
+        }
+        .btn-nav:hover::before {
+            filter: blur(15px);
+        }
+    }
+}
+
+.sweetAlert-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $colour-secondary;
+}
+
+.sweetAlert-text {
+    margin-bottom: 15px;
+    color: $colour-text;
+    .fa-arrow-up {
+        background-color: $colour-arrowUp;
+        box-shadow: 1px 1px 5px $colour-arrowUp-shadow;
+        padding: 8px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: $colour-arrow;
+    }
+    .fa-arrow-down {
+        background-color: $colour-arrowDown;
+        box-shadow: 1px 1px 5px $colour-arrowDown-shadow;
+        padding: 8px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: $colour-arrow;
+    }
+}
+
+.statistics-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 30px;
+    background-color: $colour-button;
+    border-radius: 10px;
+    .statistics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 19px;
+        font-weight: 600;
+        color: $colour-text;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+        .statistics-number {
+            color: $colour-text;
+            font-size: 17px;
+            font-weight: 500px;
+            padding-top: 10px;
+        }
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 110px;
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        justify-content: center;
+        .input-container {
+            display: flex;
+            background: $colour-secondary;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, $colour-main 0%, $colour-button 100%);
+            box-shadow: 2px 2px 5px $colour-main, -2px -2px 15px $colour-main;
+            padding: 0.3rem;
+            gap: 0.3rem;
+            margin-bottom: 10px;
+            height: 80px;
+            width: 280px;
+            .input-form {
+                border-radius: 0.8rem;
+                background: $colour-main;
+                box-shadow: inset 1px 1px 2px $colour-main, inset -1px -1px 2px $colour-button, 0px 0px 20px $colour-main, 0px 0px 20px $colour-main;
+                width: 100%;
+                padding: 1rem;
+                border: none;
+                border: 1px solid transparent;
+                color: $colour-secondary;
+                font-size: 20px;
+                text-align: center;
+                font-weight: 700;
+                transition: all 0.2s ease-in-out;
+                &:focus {
+                    border: 1px solid $colour-button;
+                    outline: none;
+                    box-shadow: inset 0px 0px 2px $colour-main, inset 0px 0px 2px $colour-main, 0px 0px 25px $colour-main, 0px 0px 25px $colour-main;
+                }
+            }
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            .btn-input {
+                padding: 1rem;
+                background: $colour-main;
+                box-shadow: 0px 0px 5px $colour-button, 0px 0px 5px $colour-button;
+                font-weight: 900;
+                letter-spacing: 0.2rem;
+                text-transform: uppercase;
+                color: $colour-secondary;
+                border: none;
+                width: 100%;
+                border-radius: 0.8rem;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background: linear-gradient(135deg, $colour-button 5%, $colour-arrow 100%);
+                    box-shadow: 0px 0px 15px $colour-main, 0px 0px 15px $colour-main;
+                }
+            }
+        }
+    }
+    .numbers-container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        gap: 5px;
+        margin-top: 40px;
+        height: 180px;
+        width: 470px;
+        box-shadow: inset 1px 1px 5px $colour-main, inset -1px -1px 2px $colour-main, 0px 0px 20px $colour-main, 0px 0px 20px $background-main;
+        .numbers {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: $colour-secondary;
+            font-size: 40px;
+            margin-top: 25px;
+            .numbers-space {
+                margin-left: 16px;
+                margin-right: 16px;
+                background-color: $colour-main;
+                border: 1px solid $colour-main;
+                outline: none;
+                box-shadow: 2px 2px 3px $background-main, 1px 1px 2px $colour-button;
+                padding: 8px;
+                border-radius: 10px;
+            }
+        }
+        .arrows {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: $colour-main;
+            font-size: 30px;
+            .arrows-space {
+                margin-left: 25.8px;
+                margin-right: 25.8px;
+            }
+            .fa-arrow-down {
+                background-color: $colour-arrowDown;
+                box-shadow: 1px 1px 5px $colour-arrowDown-shadow;
+                padding: 8px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $colour-arrow;
+            }
+            .fa-arrow-up {
+                background-color: $colour-arrowUp;
+                box-shadow: 1px 1px 5px $colour-arrowUp-shadow;
+                padding: 8px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $colour-arrow;
+            }
+            .fa-check {
+                font-size: 25px;
+                background-color: $colour-hover;
+                box-shadow: 1px 1px 5px $colour-check-shadow;
+                padding: 8px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $colour-arrow;
+            }
+        }
+    }
+}
+
+/* Ocultar las flechas de incremento y decremento en campos de entrada numéricos */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.toast {
+    font-size: 16px;
+}
+
+
+
+
+
