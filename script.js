@@ -76,6 +76,13 @@ const failedGuessesElement = document.getElementById('failedAttempt'); // Nuevo 
 const resetButton = document.getElementById('resetButton');
 const won = document.getElementById('won');
 const lost = document.getElementById('lost');
+const toggleButton = document.getElementById('toggle-mode'); // Modo claro
+
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+});
 
 let attempts = 0; // Contador de intentos
 let failedGuesses = []; // Array para almacenar números fallidos
