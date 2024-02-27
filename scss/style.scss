@@ -141,32 +141,39 @@ nav {
     }
 }
 
-.sweetAlert-title {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: $colour-secondary;
-}
-
-.sweetAlert-text {
-    margin-bottom: 15px;
-    color: $colour-text;
-    .fa-arrow-up {
-        background-color: $colour-arrowUp;
-        box-shadow: 1px 1px 5px $colour-arrowUp-shadow;
-        padding: 8px;
-        border-radius: 10px;
-        margin-top: 10px;
+.howToPlay-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $colour-button;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    .sweetAlert-title {
+        margin-top: 30px;
         margin-bottom: 10px;
-        color: $colour-arrow;
+        color: $colour-secondary;
     }
-    .fa-arrow-down {
-        background-color: $colour-arrowDown;
-        box-shadow: 1px 1px 5px $colour-arrowDown-shadow;
-        padding: 8px;
-        border-radius: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        color: $colour-arrow;
+    .sweetAlert-text {
+        margin-bottom: 15px;
+        color: $colour-text;
+        .fa-arrow-up {
+            background-color: $colour-arrowUp;
+            box-shadow: 1px 1px 5px $colour-arrowUp-shadow;
+            padding: 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: $colour-arrow;
+        }
+        .fa-arrow-down {
+            background-color: $colour-arrowDown;
+            box-shadow: 1px 1px 5px $colour-arrowDown-shadow;
+            padding: 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: $colour-arrow;
+        }
     }
 }
 
@@ -195,6 +202,20 @@ nav {
             font-weight: 500px;
             padding-top: 10px;
         }
+    }
+}
+
+.configuration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colour-button;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    .changeMode {
+        width: 100px;
+        margin: 20px;
     }
 }
 

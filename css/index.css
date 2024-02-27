@@ -92,30 +92,36 @@ nav {
     nav .btn-nav-container .btn-nav:hover::before {
       filter: blur(15px); }
 
-.sweetAlert-title {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #fff; }
-
-.sweetAlert-text {
-  margin-bottom: 15px;
-  color: #ffffffa0; }
-  .sweetAlert-text .fa-arrow-up {
-    background-color: lime;
-    box-shadow: 1px 1px 5px #00dc00;
-    padding: 8px;
-    border-radius: 10px;
-    margin-top: 10px;
+.howToPlay-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #383e4b;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px; }
+  .howToPlay-container .sweetAlert-title {
+    margin-top: 30px;
     margin-bottom: 10px;
-    color: #0c0c0c; }
-  .sweetAlert-text .fa-arrow-down {
-    background-color: red;
-    box-shadow: 1px 1px 5px #dc0000;
-    padding: 8px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #0c0c0c; }
+    color: #fff; }
+  .howToPlay-container .sweetAlert-text {
+    margin-bottom: 15px;
+    color: #ffffffa0; }
+    .howToPlay-container .sweetAlert-text .fa-arrow-up {
+      background-color: lime;
+      box-shadow: 1px 1px 5px #00dc00;
+      padding: 8px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #0c0c0c; }
+    .howToPlay-container .sweetAlert-text .fa-arrow-down {
+      background-color: red;
+      box-shadow: 1px 1px 5px #dc0000;
+      padding: 8px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #0c0c0c; }
 
 .statistics-container {
   display: flex;
@@ -141,6 +147,18 @@ nav {
       font-size: 17px;
       font-weight: 500px;
       padding-top: 10px; }
+
+.configuration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #383e4b;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px; }
+  .configuration-container .changeMode {
+    width: 100px;
+    margin: 20px; }
 
 .main-container {
   display: flex;
