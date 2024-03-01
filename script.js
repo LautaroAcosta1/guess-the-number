@@ -59,7 +59,7 @@ $('#btn-configuration').click(function() {
         title: `<span style="color: #fff">Configuración</span>`,
         html: `
             <div id="toggle-mode" class="configuration-container">
-                <button class="changeMode">Cambiar Modo</button>
+                <h2 class="sweetAlert-title">Muy pronto...</h2>
             </div>
         `,                                                       // FALTA TERMINAR
         background: "#23272F",
