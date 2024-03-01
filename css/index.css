@@ -584,7 +584,6 @@ input[type=number]::-webkit-outer-spin-button {
             box-shadow: 0px 0px 8px #23272F, 0px 0px 8px #23272F; }
     .main-container .numbers-container {
       border-radius: 10px;
-      gap: 5px;
       margin-top: 40px;
       height: 120px;
       width: 300px;
@@ -594,8 +593,8 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: row;
         justify-content: center;
         color: #fff;
-        font-size: 25px;
-        margin-top: 10px; }
+        font-size: 20px;
+        margin-top: 16px; }
         .main-container .numbers-container .numbers .numbers-space {
           margin-left: 7px;
           margin-right: 7px;
@@ -610,10 +609,10 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: row;
         justify-content: center;
         color: #23272F;
-        font-size: 15px; }
+        font-size: 13px; }
         .main-container .numbers-container .arrows .arrows-space {
-          margin-left: 16.8px;
-          margin-right: 16.8px; }
+          margin-left: 14.3px;
+          margin-right: 14.3px; }
         .main-container .numbers-container .arrows .fa-arrow-down {
           background-color: red;
           box-shadow: 1px 1px 5px #dc0000;
@@ -631,7 +630,7 @@ input[type=number]::-webkit-outer-spin-button {
           margin-bottom: 10px;
           color: #0c0c0c; }
         .main-container .numbers-container .arrows .fa-check {
-          font-size: 10px;
+          font-size: 15px;
           background-color: #ff6600;
           box-shadow: 1px 1px 5px #dc4800;
           padding: 8px;

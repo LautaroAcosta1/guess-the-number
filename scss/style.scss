@@ -749,7 +749,6 @@ input[type=number]::-webkit-outer-spin-button {
         }
         .numbers-container {
             border-radius: 10px;
-            gap: 5px;
             margin-top: 40px;
             height: 120px;
             width: 300px;
@@ -759,8 +758,8 @@ input[type=number]::-webkit-outer-spin-button {
                 flex-direction: row;
                 justify-content: center;
                 color: $colour-secondary;
-                font-size: 25px;
-                margin-top: 10px;
+                font-size: 20px;
+                margin-top: 16px;
                 .numbers-space {
                     margin-left: 7px;
                     margin-right: 7px;
@@ -777,10 +776,10 @@ input[type=number]::-webkit-outer-spin-button {
                 flex-direction: row;
                 justify-content: center;
                 color: $colour-main;
-                font-size: 15px;
+                font-size: 13px;
                 .arrows-space {
-                    margin-left: 16.8px;
-                    margin-right: 16.8px;
+                    margin-left: 14.3px;
+                    margin-right: 14.3px;
                 }
                 .fa-arrow-down {
                     background-color: $colour-arrowDown;
@@ -801,7 +800,7 @@ input[type=number]::-webkit-outer-spin-button {
                     color: $colour-arrow;
                 }
                 .fa-check {
-                    font-size: 10px;
+                    font-size: 15px;
                     background-color: $colour-hover;
                     box-shadow: 1px 1px 5px $colour-check-shadow;
                     padding: 8px;
