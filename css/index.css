@@ -413,3 +413,219 @@ input[type=number]::-webkit-outer-spin-button {
 
 .toast {
   font-size: 16px; }
+
+/* -------------------- MEDIA QUERY -------------------- */
+@media only screen and (max-width: 600px) {
+  nav {
+    margin-top: 30px; }
+    nav .btn-nav-container {
+      gap: 20px; }
+      nav .btn-nav-container .btn-nav {
+        font-size: 16px; }
+  .howToPlay-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px; }
+    .howToPlay-container .sweetAlert-title {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 5px; }
+    .howToPlay-container .sweetAlert-text {
+      font-size: 16px;
+      margin-bottom: 10px; }
+      .howToPlay-container .sweetAlert-text .fa-arrow-up {
+        box-shadow: 0.5px 0.5px 2px #00dc00;
+        padding: 6px;
+        border-radius: 6px;
+        margin-top: 5px;
+        margin-bottom: 5px; }
+      .howToPlay-container .sweetAlert-text .fa-arrow-down {
+        box-shadow: 0.5px 0.5px 2px #dc0000;
+        padding: 6px;
+        border-radius: 6px;
+        margin-top: 5px;
+        margin-bottom: 5px; }
+  .statistics-container {
+    gap: 30px;
+    padding-top: 15px;
+    border-radius: 8px; }
+    .statistics-container .statistics {
+      font-size: 18px;
+      font-weight: 600; }
+      .statistics-container .statistics .statistics-number {
+        font-size: 16px;
+        font-weight: 500px;
+        padding-top: 9px; }
+  .configuration-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px; }
+    .configuration-container .sweetAlert-title {
+      font-size: 22px;
+      margin: 20px; }
+  .main-container {
+    margin-top: 80px; }
+    .main-container .form {
+      gap: 10px; }
+      .main-container .form .input-container {
+        border-radius: 1rem;
+        box-shadow: 2px 2px 5px #23272F, -2px -2px 15px #23272F;
+        padding: 0.3rem;
+        gap: 0.3rem;
+        margin-bottom: 10px;
+        height: 80px;
+        width: 280px; }
+        .main-container .form .input-container .input-form {
+          border-radius: 0.7rem;
+          box-shadow: inset 0.5px 0.5px 1px #23272F, inset -0.5px -0.5px 1px #383e4b, 0px 0px 15px #23272F, 0px 0px 15px #23272F;
+          padding: 0.8rem;
+          border: 0.8px solid transparent;
+          font-size: 20px;
+          font-weight: 700; }
+          .main-container .form .input-container .input-form:focus {
+            border: 0.5px solid #383e4b;
+            box-shadow: inset 0px 0px 1px #23272F, inset 0px 0px 1px #23272F, 0px 0px 20px #23272F, 0px 0px 20px #23272F; }
+      .main-container .form .btn-container {
+        gap: 15px; }
+        .main-container .form .btn-container .btn-input {
+          padding: 0.8rem;
+          box-shadow: 0px 0px 3px #383e4b, 0px 0px 3px #383e4b;
+          font-weight: 900;
+          letter-spacing: 0.2rem;
+          border-radius: 0.7rem; }
+          .main-container .form .btn-container .btn-input:hover {
+            box-shadow: 0px 0px 10px #23272F, 0px 0px 10px #23272F; }
+    .main-container .numbers-container {
+      border-radius: 8px;
+      gap: 4px;
+      margin-top: 50px;
+      height: 180px;
+      width: 470px;
+      box-shadow: inset 1px 1px 5px #23272F, inset -1px -1px 2px #23272F, 0px 0px 20px #23272F, 0px 0px 20px #0e1013; }
+      .main-container .numbers-container .numbers {
+        font-size: 40px;
+        margin-top: 25px; }
+        .main-container .numbers-container .numbers .numbers-space {
+          margin-left: 16px;
+          margin-right: 16px;
+          border: 1px solid #23272F;
+          box-shadow: 2px 2px 3px #0e1013, 1px 1px 2px #383e4b;
+          padding: 8px;
+          border-radius: 10px; }
+      .main-container .numbers-container .arrows {
+        font-size: 30px; }
+        .main-container .numbers-container .arrows .arrows-space {
+          margin-left: 25.8px;
+          margin-right: 25.8px; }
+        .main-container .numbers-container .arrows .fa-arrow-down {
+          box-shadow: 1px 1px 5px #dc0000;
+          padding: 8px;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+        .main-container .numbers-container .arrows .fa-arrow-up {
+          box-shadow: 1px 1px 5px #00dc00;
+          padding: 8px;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+        .main-container .numbers-container .arrows .fa-check {
+          font-size: 25px;
+          box-shadow: 1px 1px 5px #dc4800;
+          padding: 8px;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+    .main-container .switch-container {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center; } }
+
+@media only screen and (max-width: 500px) {
+  nav {
+    margin-top: 20px; }
+    nav .btn-nav-container {
+      flex-direction: column;
+      gap: 30px; }
+      nav .btn-nav-container .btn-nav {
+        font-size: 16px; }
+  .main-container {
+    margin-top: 60px; }
+    .main-container .form {
+      gap: 10px; }
+      .main-container .form .input-container {
+        border-radius: 0.8rem;
+        box-shadow: 1px 1px 2px #23272F, -1px -1px 10px #23272F;
+        padding: 0.2rem;
+        gap: 0.2rem;
+        margin-bottom: 8px;
+        height: 70px;
+        width: 260px; }
+        .main-container .form .input-container .input-form {
+          border-radius: 0.5rem;
+          box-shadow: inset 0.3px 0.3px 0.5px #23272F, inset -0.2px -0.2px 0.5px #383e4b, 0px 0px 10px #23272F, 0px 0px 10px #23272F;
+          padding: 0.6rem;
+          border: 0.6px solid transparent;
+          font-size: 18px;
+          font-weight: 700; }
+          .main-container .form .input-container .input-form:focus {
+            border: 0.3px solid #383e4b;
+            box-shadow: inset 0px 0px 0.5px #23272F, inset 0px 0px 0.5px #23272F, 0px 0px 15px #23272F, 0px 0px 15px #23272F; }
+      .main-container .form .btn-container {
+        gap: 13px; }
+        .main-container .form .btn-container .btn-input {
+          padding: 0.6rem;
+          box-shadow: 0px 0px 2px #383e4b, 0px 0px 2px #383e4b;
+          font-weight: 900;
+          font-size: 12px;
+          letter-spacing: 0.2rem;
+          border-radius: 0.6rem; }
+          .main-container .form .btn-container .btn-input:hover {
+            box-shadow: 0px 0px 8px #23272F, 0px 0px 8px #23272F; }
+    .main-container .numbers-container {
+      border-radius: 7px;
+      gap: 3px;
+      margin-top: 50px;
+      height: 120px;
+      width: 320px;
+      box-shadow: inset 1px 1px 5px #23272F, inset -1px -1px 2px #23272F, 0px 0px 20px #23272F, 0px 0px 20px #0e1013; }
+      .main-container .numbers-container .numbers {
+        font-size: 20px;
+        margin-top: 18px; }
+        .main-container .numbers-container .numbers .numbers-space {
+          margin-left: 10px;
+          margin-right: 10px;
+          border: 1px solid #23272F;
+          box-shadow: 2px 2px 3px #0e1013, 1px 1px 2px #383e4b;
+          padding: 8px;
+          border-radius: 10px; }
+      .main-container .numbers-container .arrows {
+        font-size: 15px; }
+        .main-container .numbers-container .arrows .arrows-space {
+          margin-left: 15.8px;
+          margin-right: 15.8px; }
+        .main-container .numbers-container .arrows .fa-arrow-down {
+          box-shadow: 1px 1px 5px #dc0000;
+          padding: 8px;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+        .main-container .numbers-container .arrows .fa-arrow-up {
+          box-shadow: 1px 1px 5px #00dc00;
+          padding: 8px;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+        .main-container .numbers-container .arrows .fa-check {
+          font-size: 13px;
+          box-shadow: 1px 1px 5px #dc4800;
+          padding: 8px;
+          border-radius: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+    .main-container .switch-container {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center; }
+  .toast {
+    font-size: 12px; } }
