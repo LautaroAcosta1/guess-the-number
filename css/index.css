@@ -1,46 +1,4 @@
 @charset "UTF-8";
-/* MODO CLARO */
-body.light-mode {
-  background-color: #f5f5f5; }
-  body.light-mode nav .btn-nav-container .btn-nav {
-    color: #000;
-    background: linear-gradient(90deg, #999999, #999999, #999999, #999999); }
-    body.light-mode nav .btn-nav-container .btn-nav:before {
-      background: #d7d7d7; }
-  body.light-mode .main-container .form .input-container {
-    background: linear-gradient(135deg, #d7d7d7 0%, #999999 100%);
-    box-shadow: 2px 2px 5px #d7d7d7, -2px -2px 15px #d7d7d7; }
-    body.light-mode .main-container .form .input-container .input-form {
-      background: #d7d7d7;
-      box-shadow: inset 1px 1px 2px #d7d7d7, inset -1px -1px 2px #999999, 0px 0px 20px #d7d7d7, 0px 0px 20px #d7d7d7;
-      color: #000; }
-      body.light-mode .main-container .form .input-container .input-form:focus {
-        border: 1px solid #999999;
-        box-shadow: inset 0px 0px 2px #d7d7d7, inset 0px 0px 2px #d7d7d7, 0px 0px 25px #d7d7d7, 0px 0px 25px #d7d7d7; }
-  body.light-mode .main-container .form .btn-container .btn-input {
-    background: #d7d7d7;
-    box-shadow: 0px 0px 5px #999999, 0px 0px 5px #999999;
-    color: #000; }
-    body.light-mode .main-container .form .btn-container .btn-input:hover {
-      background: linear-gradient(135deg, #999999 5%, #d7d7d7 100%);
-      box-shadow: 0px 0px 15px #d7d7d7, 0px 0px 15px #d7d7d7; }
-  body.light-mode .main-container .numbers-container {
-    box-shadow: inset 1px 1px 5px #d7d7d7, inset -1px -1px 2px #d7d7d7, 0px 0px 20px #d7d7d7, 0px 0px 20px #f5f5f5; }
-    body.light-mode .main-container .numbers-container .numbers {
-      color: #000; }
-      body.light-mode .main-container .numbers-container .numbers .numbers-space {
-        background-color: #d7d7d7;
-        border: 1px solid #d7d7d7;
-        box-shadow: 2px 2px 3px #f5f5f5, 1px 1px 2px #999999; }
-    body.light-mode .main-container .numbers-container .arrows {
-      color: #d7d7d7; }
-      body.light-mode .main-container .numbers-container .arrows .fa-arrow-down {
-        color: #fff; }
-      body.light-mode .main-container .numbers-container .arrows .fa-arrow-up {
-        color: #fff; }
-      body.light-mode .main-container .numbers-container .arrows .fa-check {
-        color: #fff; }
-
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +6,12 @@ body.light-mode {
 
 body {
   background-color: #0e1013; }
+
+/* Ocultar las flechas de incremento y decremento en campos de entrada numéricos */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 nav {
   display: flex;
@@ -405,16 +369,50 @@ nav {
     box-shadow: 5px -1px 0px #fff;
     filter: blur(0px); } }
 
-/* Ocultar las flechas de incremento y decremento en campos de entrada numéricos */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
 .toast {
   font-size: 16px; }
 
-/* -------------------- MEDIA QUERY -------------------- */
+body.light-mode {
+  background-color: #f5f5f5; }
+  body.light-mode nav .btn-nav-container .btn-nav {
+    color: #000;
+    background: linear-gradient(90deg, #999999, #999999, #999999, #999999); }
+    body.light-mode nav .btn-nav-container .btn-nav:before {
+      background: #d7d7d7; }
+  body.light-mode .main-container .form .input-container {
+    background: linear-gradient(135deg, #d7d7d7 0%, #999999 100%);
+    box-shadow: 2px 2px 5px #d7d7d7, -2px -2px 15px #d7d7d7; }
+    body.light-mode .main-container .form .input-container .input-form {
+      background: #d7d7d7;
+      box-shadow: inset 1px 1px 2px #d7d7d7, inset -1px -1px 2px #999999, 0px 0px 20px #d7d7d7, 0px 0px 20px #d7d7d7;
+      color: #000; }
+      body.light-mode .main-container .form .input-container .input-form:focus {
+        border: 1px solid #999999;
+        box-shadow: inset 0px 0px 2px #d7d7d7, inset 0px 0px 2px #d7d7d7, 0px 0px 25px #d7d7d7, 0px 0px 25px #d7d7d7; }
+  body.light-mode .main-container .form .btn-container .btn-input {
+    background: #d7d7d7;
+    box-shadow: 0px 0px 5px #999999, 0px 0px 5px #999999;
+    color: #000; }
+    body.light-mode .main-container .form .btn-container .btn-input:hover {
+      background: linear-gradient(135deg, #999999 5%, #d7d7d7 100%);
+      box-shadow: 0px 0px 15px #d7d7d7, 0px 0px 15px #d7d7d7; }
+  body.light-mode .main-container .numbers-container {
+    box-shadow: inset 1px 1px 5px #d7d7d7, inset -1px -1px 2px #d7d7d7, 0px 0px 20px #d7d7d7, 0px 0px 20px #f5f5f5; }
+    body.light-mode .main-container .numbers-container .numbers {
+      color: #000; }
+      body.light-mode .main-container .numbers-container .numbers .numbers-space {
+        background-color: #d7d7d7;
+        border: 1px solid #d7d7d7;
+        box-shadow: 2px 2px 3px #f5f5f5, 1px 1px 2px #999999; }
+    body.light-mode .main-container .numbers-container .arrows {
+      color: #d7d7d7; }
+      body.light-mode .main-container .numbers-container .arrows .fa-arrow-down {
+        color: #fff; }
+      body.light-mode .main-container .numbers-container .arrows .fa-arrow-up {
+        color: #fff; }
+      body.light-mode .main-container .numbers-container .arrows .fa-check {
+        color: #fff; }
+
 @media only screen and (max-width: 600px) {
   nav {
     margin-top: 30px; }

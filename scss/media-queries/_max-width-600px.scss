@@ -1,0 +1,160 @@
+@media only screen and (max-width: 600px) {
+    nav {
+        margin-top: 30px;
+        .btn-nav-container {
+            gap: 20px;
+            .btn-nav {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .howToPlay-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 15px;
+        .sweetAlert-title {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        .sweetAlert-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+            .fa-arrow-up {
+                box-shadow: 0.5px 0.5px 2px $colour-arrowUp-shadow;
+                padding: 6px;
+                border-radius: 6px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .fa-arrow-down {
+                box-shadow: 0.5px 0.5px 2px $colour-arrowDown-shadow;
+                padding: 6px;
+                border-radius: 6px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .statistics-container {
+        gap: 30px;
+        padding-top: 15px;
+        border-radius: 8px;
+        .statistics {
+            font-size: 18px;
+            font-weight: 600;
+            .statistics-number {
+                font-size: 16px;
+                font-weight: 500px;
+                padding-top: 9px;
+            }
+        }
+    }
+
+    .configuration-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 8px;
+        .sweetAlert-title {
+            font-size: 22px;
+            margin: 20px;
+        }
+    }
+
+    .main-container {
+        margin-top: 80px;
+        .form {
+            gap: 10px;
+            .input-container {
+                border-radius: 1rem;
+                box-shadow: 2px 2px 5px $colour-main, -2px -2px 15px $colour-main;
+                padding: 0.3rem;
+                gap: 0.3rem;
+                margin-bottom: 10px;
+                height: 80px;
+                width: 280px;
+                .input-form {
+                    border-radius: 0.7rem;
+                    box-shadow: inset 0.5px 0.5px 1px $colour-main, inset -0.5px -0.5px 1px $colour-button, 0px 0px 15px $colour-main, 0px 0px 15px $colour-main;
+                    padding: 0.8rem;
+                    border: 0.8px solid transparent;
+                    font-size: 20px;
+                    font-weight: 700;
+                    &:focus {
+                        border: 0.5px solid $colour-button;
+                        box-shadow: inset 0px 0px 1px $colour-main, inset 0px 0px 1px $colour-main, 0px 0px 20px $colour-main, 0px 0px 20px $colour-main;
+                    }
+                }
+            }
+            .btn-container {
+                gap: 15px;
+                .btn-input {
+                    padding: 0.8rem;
+                    box-shadow: 0px 0px 3px $colour-button, 0px 0px 3px $colour-button;
+                    font-weight: 900;
+                    letter-spacing: 0.2rem;
+                    border-radius: 0.7rem;
+                    &:hover {
+                        box-shadow: 0px 0px 10px $colour-main, 0px 0px 10px $colour-main;
+                    }
+                }
+            }
+        }
+        .numbers-container {
+            border-radius: 8px;
+            gap: 4px;
+            margin-top: 50px;
+            height: 180px;
+            width: 470px;
+            box-shadow: inset 1px 1px 5px $colour-main, inset -1px -1px 2px $colour-main, 0px 0px 20px $colour-main, 0px 0px 20px $background-main;
+            .numbers {
+                font-size: 40px;
+                margin-top: 25px;
+                .numbers-space {
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    border: 1px solid $colour-main;
+                    box-shadow: 2px 2px 3px $background-main, 1px 1px 2px $colour-button;
+                    padding: 8px;
+                    border-radius: 10px;
+                }
+            }
+            .arrows {
+                font-size: 30px;
+                .arrows-space {
+                    margin-left: 25.8px;
+                    margin-right: 25.8px;
+                }
+                .fa-arrow-down {
+                    box-shadow: 1px 1px 5px $colour-arrowDown-shadow;
+                    padding: 8px;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .fa-arrow-up {
+                    box-shadow: 1px 1px 5px $colour-arrowUp-shadow;
+                    padding: 8px;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .fa-check {
+                    font-size: 25px;
+                    box-shadow: 1px 1px 5px $colour-check-shadow;
+                    padding: 8px;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .switch-container {
+            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

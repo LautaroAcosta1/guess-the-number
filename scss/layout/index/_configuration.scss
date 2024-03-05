@@ -1,0 +1,13 @@
+.configuration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colour-button;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    .sweetAlert-title {
+        margin: 30px;
+        color: $colour-secondary;
+    }
+}
